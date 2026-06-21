@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>开云 · 简明指南</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #f9fafb;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      color: #1e293b;
+      line-height: 1.6;
+      padding: 2rem 1rem;
+    }
+
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 0.5rem;
+    }
+
+    /* hero / 主视觉 */
+    .hero {
+      margin-bottom: 3rem;
+      padding-top: 1.2rem;
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      font-weight: 500;
+      letter-spacing: -0.03em;
+      line-height: 1.2;
+      color: #0b1a2e;
+    }
+
+    .hero .sub {
+      display: block;
+      margin-top: 0.75rem;
+      font-size: 1.1rem;
+      font-weight: 380;
+      color: #4b5563;
+      max-width: 38rem;
+      border-left: 3px solid #b9c9db;
+      padding-left: 1.2rem;
+    }
+
+    /* 通用卡片 */
+    .card-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      margin: 3rem 0;
+    }
+
+    .card {
+      background: white;
+      border-radius: 24px;
+      padding: 1.8rem 2rem;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.02), 0 2px 4px rgba(0, 0, 0, 0.02);
+      transition: box-shadow 0.15s ease;
+      border: 1px solid #edf2f7;
+    }
+
+    .card:hover {
+      box-shadow: 0 12px 32px rgba(0, 20, 40, 0.04);
+    }
+
+    .card h2 {
+      font-size: 1.5rem;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid #eef2f6;
+      color: #0b1a2e;
+    }
+
+    .card ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .card li {
+      padding: 0.5rem 0 0.5rem 1.4rem;
+      position: relative;
+      color: #334155;
+      font-size: 1rem;
+    }
+
+    .card li::before {
+      content: "—";
+      position: absolute;
+      left: 0;
+      color: #7f8c9a;
+      font-weight: 300;
+    }
+
+    .card p {
+      color: #334155;
+      margin-bottom: 0.6rem;
+    }
+
+    .card p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* 适合人群卡片——用内联标签 */
+    .tag-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem 0.8rem;
+      margin-top: 0.4rem;
+    }
+
+    .tag {
+      background: #eef2f6;
+      padding: 0.25rem 1rem 0.3rem;
+      border-radius: 40px;
+      font-size: 0.9rem;
+      font-weight: 450;
+      color: #1e2f40;
+    }
+
+    /* 自然链接段落 */
+    .link-sentence {
+      background: white;
+      border-radius: 24px;
+      padding: 1.8rem 2rem;
+      margin: 2.5rem 0;
+      border: 1px solid #e5eaef;
+      font-size: 1.05rem;
+    }
+
+    .link-sentence a {
+      color: #1f4e7a;
+      text-decoration: none;
+      font-weight: 500;
+      border-bottom: 1px solid #b3c7dd;
+      transition: border-color 0.1s;
+    }
+
+    .link-sentence a:hover {
+      border-bottom: 2px solid #1f4e7a;
+    }
+
+    .link-sentence .meta-note {
+      display: block;
+      margin-top: 1.2rem;
+      font-size: 0.9rem;
+      color: #5f6c7a;
+      border-top: 1px dashed #dce2e9;
+      padding-top: 1rem;
+    }
+
+    /* 访问提醒小卡片 */
+    .note-block {
+      background: #f1f5f9;
+      border-radius: 20px;
+      padding: 1.5rem 2rem;
+      margin: 2.5rem 0;
+    }
+
+    .note-block h3 {
+      font-weight: 500;
+      font-size: 1.2rem;
+      margin-bottom: 0.6rem;
+      color: #0b1a2e;
+    }
+
+    .note-block p {
+      color: #2c3e50;
+      font-size: 0.98rem;
+    }
+
+    .note-block ul {
+      margin: 0.7rem 0 0;
+      padding-left: 1.2rem;
+      color: #2c3e50;
+    }
+
+    .note-block li {
+      margin-bottom: 0.3rem;
+    }
+
+    hr {
+      border: 0;
+      height: 1px;
+      background: linear-gradient(to right, transparent, #d4dee8, transparent);
+      margin: 3rem 0 1rem;
+    }
+
+    .footer-note {
+      text-align: center;
+      font-size: 0.85rem;
+      color: #7b8797;
+      margin: 3rem 0 0.5rem;
+      letter-spacing: 0.2px;
+    }
+
+    /* 响应式 */
+    @media (max-width: 500px) {
+      body {
+        padding: 1.2rem 0.75rem;
+      }
+
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+
+      .card {
+        padding: 1.4rem 1.2rem;
+      }
+
+      .link-sentence {
+        padding: 1.4rem 1.2rem;
+      }
+
+      .note-block {
+        padding: 1.2rem 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- hero 主视觉 + 简明指南语气 -->
+  <div class="hero">
+    <h1>开云 · 简明指南</h1>
+    <span class="sub">信息密度优先 · 避免无效跳转 · 直接理解用途</span>
+  </div>
+
+  <!-- 用途卡片 (信息卡片式) -->
+  <div class="card-grid">
+    <div class="card">
+      <h2>用途概览</h2>
+      <ul>
+        <li>通过结构化索引快速定位所需板块</li>
+        <li>提供轻量级访问路径，减少中间步骤</li>
+        <li>内容层面保持克制，不堆砌无关模块</li>
+        <li>适合需要直接获取信息而非浏览导览的用户</li>
+      </ul>
+    </div>
+
+    <!-- 适合人群卡片 + tag -->
+    <div class="card">
+      <h2>适合人群</h2>
+      <p style="margin-bottom: 0.6rem;">如果你属于以下任意一类，这个方向可能更贴合你的使用习惯：</p>
+      <div class="tag-group">
+        <span class="tag">简洁工具偏好者</span>
+        <span class="tag">轻度信息检索</span>
+        <span class="tag">避免过度动效</span>
+        <span class="tag">快速确认可用性</span>
+        <span class="tag">去中心化阅读</span>
+      </div>
+      <p style="margin-top: 1rem; font-size: 0.95rem; color: #3a4b5e;">
+        页面结构偏平，不依赖深层菜单，每次访问都能直接看到核心入口。
+      </p>
+    </div>
+  </div>
+
+  <!-- 自然链接段落（嵌入「开云」，无点击/进入等词汇） -->
+  <div class="link-sentence">
+    <p>
+      如果你希望了解该平台的基础功能与内容组织方式，可以直接参考 
+      <a href="https://web-m-kai-yun.com">开云</a> 
+      的页面结构——它采用了一种接近文档中心的布局，信息层级清晰且没有多余的装饰元素。
+    </p>
+    <span class="meta-note">注：以上描述基于页面公开表现，不含推广或承诺。</span>
+  </div>
+
+  <!-- 访问提醒 + 类似 FAQ 摘要 -->
+  <div class="note-block">
+    <h3>访问提醒</h3>
+    <p>从使用角度出发，这里列出几条在首次接触时值得留意的习惯：</p>
+    <ul>
+      <li>大部分功能无需注册即可查看，但部分交互可能依赖基础会话状态</li>
+      <li>页面内容以静态信息为主，动态加载较少，加载速度通常较快</li>
+      <li>如果遇到显示异常，建议先检查网络环境或更新浏览器版本</li>
+      <li>没有强制弹窗或过度引导，适合快速浏览后自行判断</li>
+    </ul>
+  </div>
+
+  <!-- 附加简短 FAQ 风格段落 (融入自然提示) -->
+  <div class="card" style="margin-top: 0.5rem;">
+    <h2>常见简要</h2>
+    <p><strong>页面是否持续更新？</strong> 信息结构相对稳定，但具体内容会根据运营节奏调整，建议以实际显示为准。</p>
+    <p style="margin-top: 1rem;"><strong>需要特殊工具访问吗？</strong> 标准浏览器即可，不需要额外插件或配置。</p>
+    <p style="margin-top: 1rem;"><strong>与其他类似页面有何区别？</strong> 更强调信息密度和直接性，减少中间跳转层级。</p>
+  </div>
+
+  <hr>
+
+  <div class="footer-note">
+    · 基于公开信息整理 · 无诱导表述 ·
+  </div>
+
+</div>
+</body>
+</html>
