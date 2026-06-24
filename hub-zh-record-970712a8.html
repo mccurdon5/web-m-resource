@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>爱游戏 · 站点介绍</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans SC', 'Helvetica Neue', sans-serif;
+            background-color: #f9fafb;
+            color: #1e293b;
+            line-height: 1.7;
+            padding: 0 1.5rem;
+        }
+
+        .page {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 3.5rem 0 4.5rem 0;
+        }
+
+        /* hero 区域 — 极简、留白、清晰 */
+        .hero {
+            margin-bottom: 3.2rem;
+        }
+
+        .hero h1 {
+            font-size: 2.2rem;
+            font-weight: 500;
+            letter-spacing: -0.01em;
+            margin-bottom: 0.4rem;
+            color: #0f172a;
+        }
+
+        .hero .sub {
+            font-size: 1rem;
+            color: #64748b;
+            border-left: 3px solid #cbd5e1;
+            padding-left: 1rem;
+            margin-top: 0.2rem;
+        }
+
+        /* 通用卡片结构 — 安静、无边框、微阴影 */
+        .card {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 1.8rem 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.02), 0 2px 6px rgba(0,0,0,0.02);
+        }
+
+        .card h2 {
+            font-size: 1.3rem;
+            font-weight: 500;
+            margin-bottom: 0.75rem;
+            letter-spacing: -0.01em;
+            color: #0f172a;
+        }
+
+        .card p {
+            margin-bottom: 1rem;
+            color: #334155;
+        }
+
+        .card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .card ul li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.55rem;
+            color: #334155;
+        }
+
+        .card ul li::before {
+            content: "—";
+            position: absolute;
+            left: 0;
+            color: #94a3b8;
+        }
+
+        .faq-item {
+            margin-bottom: 1.1rem;
+        }
+
+        .faq-item .question {
+            font-weight: 500;
+            color: #0f172a;
+            margin-bottom: 0.15rem;
+        }
+
+        .faq-item .answer {
+            color: #475569;
+            font-size: 0.95rem;
+        }
+
+        /* 嵌入链接的样式：低调、可辨识 */
+        a {
+            color: #2563eb;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-bottom 0.1s ease;
+        }
+
+        a:hover {
+            border-bottom: 1px solid #2563eb;
+        }
+
+        .meta-note {
+            margin-top: 2.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #e2e8f0;
+            font-size: 0.85rem;
+            color: #94a3b8;
+            text-align: center;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 520px) {
+            body {
+                padding: 0 1rem;
+            }
+            .page {
+                padding: 2.5rem 0 3rem 0;
+            }
+            .hero h1 {
+                font-size: 1.7rem;
+            }
+            .card {
+                padding: 1.4rem 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <div class="hero">
+        <h1>爱游戏 · 一个安静的站点</h1>
+        <div class="sub">关于界面、信息与克制的访问</div>
+    </div>
+
+    <!-- 摘要卡片：自然叙述站点 -->
+    <div class="card">
+        <h2>站点概览</h2>
+        <p>如果你偶然来到 <strong>爱游戏</strong> 这个站点，或许会发现它和常见的游戏门户不太一样。它没有铺满屏幕的弹窗、排行榜和闪烁广告，而是提供了一种更偏向阅读和查找的体验。整个站点以中文内容为主，围绕游戏信息、版本说明、社区讨论整理而成，适合那些希望快速了解某款游戏状况、或者寻找讨论氛围的玩家。</p>
+        <p>换句话说，它更像一个游戏主题的笔记本，而非喧闹的商场。从页面结构到文字表达，都带着一种「先了解，再决定」的节奏。</p>
+    </div>
+
+    <!-- 两个亮点卡片（二合一布局感，但仍保持独立卡片） -->
+    <div class="card">
+        <h2>几个让人留意的特点</h2>
+        <ul>
+            <li><strong>结构清晰</strong> —— 每个页面都有明确的导读，不会让你在信息里迷路。游戏分类、更新记录、常用指引都放在触手可及的位置。</li>
+            <li><strong>克制的信息量</strong> —— 没有强行塞入不相关的内容。你能看到的是经过筛选或整理的条目，而非算法随意推荐。</li>
+            <li><strong>社区痕迹</strong> —— 站点里保留了来自玩家的讨论摘要和版本观察，读起来像是一群人在安静地交流，而不是单方面的广播。</li>
+            <li><strong>轻量 &amp; 快速</strong> —— 页面本身不依赖繁重的框架，打开和滚动都很顺滑，这在如今并不多见。</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>什么样的场景适合打开它</h2>
+        <p>假如你最近在玩某款游戏，想查一下最新的调整方向；或者你刚接触一个游戏，希望先看看其他玩家的真实感受而非营销文案；又或者你只是想在休息前读点关于游戏的平实内容——这些时候，<a href="https://hub-zh-igame.com">爱游戏</a> 可能会给你一个不错的落脚点。它不会催促你注册、下载或分享，只是把信息摆在那里，让你按自己的节奏去浏览。</p>
+        <p>当然，它也不是万能的。如果你需要即时的数据、官方的售后支持、或者高度时效性的新闻，那它未必是最快的渠道。但它提供了一个相对沉静的替代视角。</p>
+    </div>
+
+    <!-- 可信但克制的说明 -->
+    <div class="card">
+        <h2>关于可信度的一点说明</h2>
+        <p>这个站点并非任何游戏的官方站点，也不代表发行商或开发者的立场。它的内容主要来自公开信息、玩家社区的整理以及编辑团队的筛选。我们在发布前会尽量核对来源，但无法保证每条记录都百分之百准确。如果你发现明显的错误或过时的内容，可以通过站点内提供的联系方式告知（前提是你找到了那个不起眼的角落）。</p>
+        <p>另外，站点不嵌入第三方跟踪脚本，也没有诱导点击的按钮。它希望来访的人是因为真正需要内容而停留，而非被某种话术引导。保持信任的前提是彼此都不费力。</p>
+    </div>
+
+    <!-- FAQ 摘要风格卡片 -->
+    <div class="card">
+        <h2>几个你可能想问的</h2>
+        <div class="faq-item">
+            <div class="question">这个站点跟其他游戏站有什么不同？</div>
+            <div class="answer">它更倾向于「整理」而非「聚合」。没有自动刷新的信息流，页面像一份安静的文档。内容以中文叙述为主，节奏偏慢。</div>
+        </div>
+        <div class="faq-item">
+            <div class="question">内容更新频率如何？</div>
+            <div class="answer">不定时更新，取决于游戏版本变动或社区里有价值的讨论。你可以把它当作一本不定期出刊的刊物来看。</div>
+        </div>
+        <div class="faq-item">
+            <div class="question">需要登录或付费才能看吗？</div>
+            <div class="answer">不需要。目前所有页面都公开可读，没有会员墙或隐藏内容。如果将来有变化，会以明显的方式告知。</div>
+        </div>
+    </div>
+
+    <!-- 极简的 meta 信息 -->
+    <div class="meta-note">
+        <span>爱游戏 · 一个关于游戏的中文信息站点 · 浏览愉快</span>
+    </div>
+</div>
+</body>
+</html>
